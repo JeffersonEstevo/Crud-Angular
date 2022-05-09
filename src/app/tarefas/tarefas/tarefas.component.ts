@@ -12,7 +12,7 @@ import { TarefasService } from './../services/tarefas.service';
 export class TarefasComponent implements OnInit {
 
   // podemos criar a tarefa assim, ou no construtor abaixo   // Tarefa[] = [];
-  tarefas: Observable<Tarefa[]>;
+  tarefas$: Observable<Tarefa[]>;
     //[ {_id: 1, titulo : 'Limpar quarto', descricao: 'Dar a geral no quarto', responsavel: 'Jefferson',
     //prioridade: 'Alta', data: '08/05/2022' }  ];
 
@@ -24,12 +24,11 @@ export class TarefasComponent implements OnInit {
   constructor(private tarefasService: TarefasService) {
     // this.tarefas = [];
     // this.tarefasService = new TarefasService();
-     this.tarefas = this.tarefasService.list();
+     this.tarefas$ = this.tarefasService.list();
   }
 
   ngOnInit(): void {
     // this.tarefas = this.tarefasService.list();
-    //
   }
 
 }
