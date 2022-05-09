@@ -29,6 +29,7 @@ export class TarefasComponent implements OnInit {
 
   ngOnInit(): void {
     // this.tarefas = this.tarefasService.list();
+    //
   }
 
 }
