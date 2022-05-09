@@ -1,5 +1,7 @@
+import { ErrorDialogComponent } from './../../shared/components/error-dialog/error-dialog.component';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { catchError, Observable, of } from 'rxjs';
 
 import { Tarefa } from './../model/tarefa';
 import { TarefasService } from './../services/tarefas.service';
@@ -21,10 +23,26 @@ export class TarefasComponent implements OnInit {
   //tarefasService: TarefasService;
 
 
-  constructor(private tarefasService: TarefasService) {
+  constructor(
+      private tarefasService: TarefasService,
+      public dialog: MatDialog
+    ) {
     // this.tarefas = [];
     // this.tarefasService = new TarefasService();
-     this.tarefas$ = this.tarefasService.list();
+     this.tarefas$ = this.tarefasService.list().pipe(
+      // tratando errros
+      catchError(error => {
+        //console.log(error);
+        this.onError('Erro ao carregar tarefas.')
+        return of([])
+       })
+     );
+  }
+
+  onError(errorMsg: string) {
+    this.dialog.open(ErrorDialogComponent, {
+      data: errorMsg
+    });
   }
 
   ngOnInit(): void {

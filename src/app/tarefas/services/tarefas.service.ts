@@ -11,6 +11,9 @@ export class TarefasService {
 
   private readonly API = '/assets/tarefas.json';
 
+  // gerando erro proposital para tratamento
+  // private readonly API = '/assets/aaaaaaaaaaatarefas.json';
+
 
   constructor(private httpClient: HttpClient) { }
 

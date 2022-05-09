@@ -1,10 +1,11 @@
-import { AppMaterialModule } from './../shared/app-material/app-material.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-
+import { AppMaterialModule } from './../shared/app-material/app-material.module';
+import { SharedModule } from './../shared/shared.module';
 import { TarefasRoutingModule } from './tarefas-routing.module';
 import { TarefasComponent } from './tarefas/tarefas.component';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TarefasComponent } from './tarefas/tarefas.component';
   imports: [
     CommonModule,
     TarefasRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    SharedModule
   ]
 })
 export class TarefasModule { }
