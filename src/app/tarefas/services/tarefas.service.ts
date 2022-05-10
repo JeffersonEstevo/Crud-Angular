@@ -9,7 +9,8 @@ import { delay, first, tap } from 'rxjs/operators';
 })
 export class TarefasService {
 
-  private readonly API = '/assets/tarefas.json';
+  //private readonly API = '/assets/tarefas.json';
+  private readonly API = '/api/tarefas';
 
   // gerando erro proposital para tratamento
   // private readonly API = '/assets/aaaaaaaaaaatarefas.json';
