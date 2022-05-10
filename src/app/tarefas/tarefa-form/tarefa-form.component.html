@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-toolbar color="primary">Adicionar Nova Tarefa </mat-toolbar>
+
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Descrição" formControlName="descricao">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Responsável" formControlName="responsavel">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Prioridade</mat-label>
+        <mat-select>
+          <mat-option value="one">Baixa</mat-option>
+          <mat-option value="two">Média</mat-option>
+          <mat-option value="three">Alta</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Data" formControlName="data">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+
+  <mat-card-actions >
+    <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+    <button mat-raised-button (click)="onCancel()">Cancelar</button>
+  </mat-card-actions>
+</mat-card>

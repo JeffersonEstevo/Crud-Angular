@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { ErrorDialogComponent } from './../../shared/components/error-dialog/error-dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -18,14 +19,16 @@ export class TarefasComponent implements OnInit {
     //[ {_id: 1, titulo : 'Limpar quarto', descricao: 'Dar a geral no quarto', responsavel: 'Jefferson',
     //prioridade: 'Alta', data: '08/05/2022' }  ];
 
-  displayedColumns = ['titulo', 'descricao', 'responsavel', 'prioridade', 'data'];
+  displayedColumns = ['titulo', 'descricao', 'responsavel', 'prioridade', 'data', 'acoes'];
 
   //tarefasService: TarefasService;
 
 
   constructor(
       private tarefasService: TarefasService,
-      public dialog: MatDialog
+      public dialog: MatDialog,
+      private router: Router,
+      private route: ActivatedRoute
     ) {
     // this.tarefas = [];
     // this.tarefasService = new TarefasService();
@@ -47,6 +50,10 @@ export class TarefasComponent implements OnInit {
 
   ngOnInit(): void {
     // this.tarefas = this.tarefasService.list();
+  }
+
+  onAdd(){
+    this.router.navigate(['new'], {relativeTo: this.route});
   }
 
 }

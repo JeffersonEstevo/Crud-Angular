@@ -21,7 +21,7 @@ export class TarefasService {
   list() { //: Tarefa[] {
     return this.httpClient.get<Tarefa[]>(this.API)
     .pipe(
-      first(), // para obter a primeira resposta od servidor vindo do tarefas.json
+      first(), // para obter a primeira resposta do servidor vindo do tarefas.json
       delay(3000),
       tap(tarefas => console.log(tarefas))
     );
