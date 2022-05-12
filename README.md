@@ -1,34 +1,9 @@
-<<<<<<< HEAD
-# CrudAngular
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-Com o Angular instalado na máquina:
-Entrar na pasta crud-angular-spring\crud-angular e rodar  o comando npm run start
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
 # Crud-Angular
->>>>>>> a802fed8dd1671ec2731b0ba041e6254abec4ce7
+
+Pré-Requisitos para rodar o projeto:
+* Instalar NodeJS, diponível em: `https://nodejs.org/pt-br/download/`
+* Instalar Angular na versão mais recente, com o seguinte comando no terminal: `npm install -g @angular/cli`
+
+
+Para rodar a aplicação, basta fazer o download do projeto, descompactar em uma pasta, caminhar até o diretório onde foi instalado o projeto, e digitar o comando:
+`C:\<SEU DIRETÓRIO>\crud-angular> npm run start`
