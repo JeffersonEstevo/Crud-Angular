@@ -19,7 +19,7 @@ export class TarefasComponent implements OnInit {
     //[ {_id: 1, titulo : 'Limpar quarto', descricao: 'Dar a geral no quarto', responsavel: 'Jefferson',
     //prioridade: 'Alta', data: '08/05/2022' }  ];
 
-  displayedColumns = ['titulo', 'descricao', 'responsavel', 'prioridade', 'data', 'acoes'];
+  displayedColumns = ['_id', 'titulo', 'descricao', 'responsavel', 'prioridade', 'data', 'acoes'];
 
   //tarefasService: TarefasService;
 

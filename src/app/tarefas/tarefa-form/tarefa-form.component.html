@@ -11,8 +11,14 @@
         <input matInput placeholder="Descrição" formControlName="descricao">
       </mat-form-field>
 
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Responsável" formControlName="responsavel">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Responsável</mat-label>
+        <mat-select formControlName="prioridade">
+          <mat-option value="null"></mat-option>
+          <mat-option value="baixa">Jefferson</mat-option>
+          <mat-option value="media">Joãozinho</mat-option>
+          <mat-option value="alta">Outra Pessoa</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <mat-form-field appearance="fill" class="full-width">
